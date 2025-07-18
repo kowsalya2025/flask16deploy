@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Movies in {{ genre }} Genre</h2>
+<ul class="list-group">
+    {% for movie in movies %}
+    <li class="list-group-item">{{ movie }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('home') }}" class="btn btn-secondary mt-3">Pick Another Genre</a>
+{% endblock %}
+
